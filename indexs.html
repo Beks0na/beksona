@@ -1,0 +1,1204 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript">
+		(function(m, e, t, r, i, k, a) {
+			m[i] = m[i] || function() {
+				(m[i].a = m[i].a || []).push(arguments)
+			};
+			m[i].l = 1 * new Date();
+			for (var j = 0; j < document.scripts.length; j++) {
+				if (document.scripts[j].src === r) {
+					return;
+				}
+			}
+			k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+		})
+		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+		ym(99223283, "init", {
+			clickmap: true,
+			trackLinks: true,
+			accurateTrackBounce: true,
+			webvisor: true
+		});
+	</script>
+	<noscript>
+		<div><img src="https://mc.yandex.ru/watch/99223283" style="position:absolute; left:-9999px;" alt="" /></div>
+	</noscript>
+	<!-- /Yandex.Metrika counter -->
+	<title>Разработка сайтов</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20250115191120">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="description" content="">
+	<!-- <meta name="keywords" content="Ключевые слова"> -->
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style class="preloader-style">
+		.preloader {
+			pointer-events: none;
+			z-index: 1000;
+			position: fixed;
+			width: 100vw;
+			height: 100vh;
+			top: 0rem;
+			left: 0rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: #000;
+		}
+
+		.preloader * {
+			box-sizing: border-box;
+		}
+
+		.preloader__body {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			width: 25rem;
+			height: 25rem;
+		}
+
+		.preloader__item {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			border-left: 0.1875rem solid #03e9f4;
+			border-right: 0.1875rem solid #086fff;
+			border-radius: 37% 61% 63% 35% / 42% 34% 64% 56%;
+			animation: preloader-rotate 3s linear infinite;
+		}
+
+		.preloader__item_one {
+			animation: preloader-rotate 6s linear infinite reverse;
+		}
+
+		.preloader__item_two {
+			animation: preloader-rotate 9s linear infinite;
+		}
+
+		.preloader__item_three {
+			animation: preloader-rotate 12s linear infinite reverse;
+		}
+
+		@keyframes preloader-rotate {
+			0% {
+				transform: rotate(0);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+
+		@media (max-width: 47.9988rem) {
+
+			.preloader__shadow,
+			.preloader__shadow-2 {
+				display: none;
+			}
+		}
+
+		@media (min-width: 47.9988rem) {
+
+			.preloader__shadow,
+			.preloader__shadow-2 {
+				position: absolute;
+				z-index: -1;
+				width: 12.5rem;
+				height: 12.5rem;
+				pointer-events: none;
+				border-radius: 50%;
+				filter: blur(9.375rem);
+
+			}
+
+			.preloader__shadow {
+				top: -6.25rem;
+				left: -31.25rem;
+				background-color: #0a61e3;
+				animation: preloader-shadow 8s linear infinite;
+			}
+
+			.preloader__shadow-2 {
+				bottom: -6.25rem;
+				right: -31.25rem;
+				background-color: #00efe1;
+				animation: preloader-shadow-2 8s linear infinite;
+			}
+
+			@keyframes preloader-shadow {
+				0% {
+					top: -6.25rem;
+					left: -31.25rem;
+				}
+
+				50% {
+					top: 15.625rem;
+					left: 37.5rem;
+				}
+
+				100% {
+					top: -6.25rem;
+					left: -31.25rem;
+				}
+			}
+
+			@keyframes preloader-shadow-2 {
+				0% {
+					bottom: -6.25rem;
+					right: -31.25rem;
+				}
+
+				50% {
+					bottom: 15.625rem;
+					right: 37.5rem;
+				}
+
+				100% {
+					bottom: -6.25rem;
+					right: -31.25rem;
+				}
+			}
+		}
+
+		@media (max-width: 29.9988rem) {
+			.preloader__body {
+				width: 15.625rem;
+				height: 15.625rem;
+			}
+		}
+
+		.preloader__counter {
+			font-size: 2rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-weight: 700;
+			transform: translate(-50%, -50%);
+			color: #03e9f4;
+		}
+
+		.lock body {
+			overflow: hidden;
+			touch-action: none;
+			overscroll-behavior: none;
+		}
+
+		body {
+			opacity: 0;
+			visibility: hidden;
+		}
+
+		.loading .preloader {
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.loaded .preloader {
+			opacity: 0;
+			visibility: hidden;
+			transition: visibility 0.5s ease 0s, opacity 0.5s ease 0s;
+		}
+
+		.loaded body {
+			transition: visibility 0.5s ease 0s, opacity 0.5s ease 0s;
+			opacity: 1;
+			visibility: visible;
+		}
+	</style>
+</head>
+
+<body oncopy="return false;" oncontextmenu="return false;">
+	<div class="wrapper">
+		<header data-lp data-watch class="header">
+			<div class="header__container">
+				<div class="header__row">
+					<div data-progress class="progress"></div>
+					<a href="https://aleksandrfrs.ru" class="logo">
+						<div class="logo__animate">
+							<img class="logo__image" src="img/logo.svg" alt="Логотип">
+							<img class="logo__image logo__image_bg" src="img/logo_2.svg" alt="Логотип">
+						</div>
+					</a>
+					<div class="header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item"><a href="portfolio.html" class="menu__link">Портфолио</a></li>
+								<li class="menu__item"><button type="button" data-goto-header data-goto="#about-us" class="menu__link">О нас</button></li>
+								<li class="menu__item"><button type="button" data-goto-header data-goto="#technologies" class="menu__link">Технологии</button></li>
+								<li class="menu__item"><button type="button" data-goto-header data-goto="#request" class="menu__link">Контакты</button></li>
+							</ul>
+							<div class="menu__mobile">
+								<div class="menu__block-buttons-2 block-buttons-2">
+									<a target="_blank" href="https://t.me/Aleksandr_freelancer" class="button">
+										Обсудить проект в <span>tg</span>
+										<div class="decor-arrow">
+											<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow.svg" alt="Icon">
+											<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow.svg" alt="Icon">
+											<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow.svg" alt="Icon">
+										</div>
+									</a>
+								</div>
+								<div class="menu__center">
+									<div class="menu__text">Задайте вопрос, <span>я онлайн!</span></div>
+								</div>
+							</div>
+						</nav>
+					</div>
+					<ul data-da=".menu__body, 767.98,2" class="messengers">
+						<li class="messengers__item"><a target="_blank" href="https://t.me/Aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/telegram.svg" alt="Icon"></a></li>
+						<li class="messengers__item"><a target="_blank" href="mailto:aleksandr_freelancer@mail.ru" class="messengers__link"><img class="messengers__icon" src="img/email.svg" alt="Icon"></a></li>
+						<li class="messengers__item"><a target="_blank" href="https://kwork.ru/user/aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/kwork.svg" alt="Icon"></a></li>
+					</ul>
+					<div class="icon-menu">
+						<span></span>
+						<div class="icon-menu__decor"></div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<main class="page">
+			<section data-watch data-decor-body class="page__home home">
+				<div data-decor-item class="decor decor_mobile-none _green"></div>
+				<div data-decor-item class="decor decor_mobile-none _blue"></div>
+				<div data-decor-item class="decor decor_mobile-none _blue"></div>
+				<div data-decor-item class="decor _yellow "></div>
+				<div data-decor-item class="decor _blue"></div>
+				<div data-decor-item class="decor decor_mobile-none _yellow"></div>
+				<div data-decor-item class="decor decor_mobile-none _green"></div>
+				<div data-decor-item class="decor _green"></div>
+				<div data-decor-item class="decor _blue decor_mobile-none"></div>
+				<div data-decor-item class="decor _green "></div>
+				<div data-decor-item class="decor _yellow"></div>
+				<div data-decor-item class="decor _yellow decor_mobile-none"></div>
+				<div data-decor-item class="decor decor_mobile-none _blue-lite"></div>
+				<div data-decor-item class="decor _blue-lite"></div>
+				<div data-decor-item class="decor decor_mobile-none _blue-lite"></div>
+				<div data-decor-item class="decor _blue-lite "></div>
+				<div class="home__container">
+					<div class="home__box">
+						<div class="home__column">
+							<h1 class="home__title">Разработка сайтов
+								<span data-grid-keywords-wrapper="watcher">
+									<span data-grid-keywords>
+										<span data-grid-keywords-sizer class="home__text-color">Верстка сайта</span>
+										<span class="home__text-color">Дизайн сайта</span>
+									</span>
+								</span>
+							</h1>
+							<h2 class="home__sub-title">Комплексная разработка сайта от дизайна до верстки, <span>включая создание адаптивного интерфейса</span></h2>
+							<div class="home__block-buttons-2 block-buttons-2">
+								<button data-popup="#popup" type="button" class="button button_bg">Заказать сайт</button>
+								<a target="_blank" href="https://t.me/Aleksandr_freelancer" class="button">
+									Обсудить проект в <span>tg</span>
+									<div class="decor-arrow">
+										<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow.svg" alt="Icon">
+										<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow.svg" alt="Icon">
+										<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow.svg" alt="Icon">
+									</div>
+								</a>
+							</div>
+						</div>
+						<ul class="home__items">
+							<li class="home__item">
+								<div class="home__number"><span>100</span> +</div>
+								<div class="home__name">Выполненых <span>проектов</span></div>
+							</li>
+							<li class="home__item">
+								<div class="home__number">4</div>
+								<div class="home__name">Года в веб-<span>разработке</span></div>
+							</li>
+							<li class="home__item">
+								<div class="home__number"><span>100</span>%</div>
+								<div class="home__name">Качественный <span>веб-дизайн</span></div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div data-watch class="page__ticker ticker">
+				<div class="ticker__wrapper">
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Портфолио <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+				</div>
+			</div>
+			<section class="page__portfolio portfolio scroll">
+				<div class="portfolio__container">
+					<div class="decor-round decor-round_one _blue"></div>
+					<div class="decor-round decor-round_two _green"></div>
+					<div class="portfolio__block-titles block-titles">
+						<h2 class="block-titles__title">
+							<div class="block-titles__gradient"></div>
+							<span>Портфолио</span>
+						</h2>
+					</div>
+					<div class="portfolio__cards portfolio__cards_sticky cards cards_filter">
+						<div class="cards__card">
+							<div class="cards__name">Корпоративный | Funding Stax</div>
+							<div class="cards__parent">
+								<div class="cards__box">
+									<div class="cards__picture">
+										<img loading="lazy" class="cards__image" src="img/cards_image_66.webp" alt="Image">
+										<div class="cards__fon"></div>
+										<div class="cards__body">
+											<div class="cards__text">Корпоративный | Funding Stax</div>
+											<div class="cards__block-buttons block-buttons">
+												<a target="_blank" href="https://aleksandrfrs.ru/funding-stax" class="block-buttons__button">Посмотреть</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards__card">
+							<div class="cards__name">Корпоративный | Evacuator</div>
+							<div class="cards__parent">
+								<div class="cards__box">
+									<div class="cards__picture">
+										<img loading="lazy" class="cards__image" src="img/cards_image_60.webp" alt="Image">
+										<div class="cards__fon"></div>
+										<div class="cards__body">
+											<div class="cards__text">Корпоративный | Evacuator</div>
+											<div class="cards__block-buttons block-buttons">
+												<a target="_blank" href="https://aleksandrfrs.ru/evacuator" class="block-buttons__button">Посмотреть</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards__card">
+							<div class="cards__name">Корпоративный | Skyrim</div>
+							<div class="cards__parent">
+								<div class="cards__box">
+									<div class="cards__picture">
+										<img loading="lazy" class="cards__image" src="img/cards_image_5.webp" alt="Image">
+										<div class="cards__fon"></div>
+										<div class="cards__body">
+											<div class="cards__text">Корпоративный | Skyrim</div>
+											<div class="cards__block-buttons block-buttons">
+												<a target="_blank" href="https://aleksandrfrs.ru/skyrim" class="block-buttons__button">Посмотреть</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards__card">
+							<div class="cards__name">Каталог | Ataka</div>
+							<div class="cards__parent">
+								<div class="cards__box">
+									<div class="cards__picture">
+										<img loading="lazy" class="cards__image" src="img/cards_image_6.webp" alt="Image">
+										<div class="cards__fon"></div>
+										<div class="cards__body">
+											<div class="cards__text">Каталог | Ataka</div>
+											<div class="cards__block-buttons block-buttons">
+												<a target="_blank" href="https://aleksandrfrs.ru/ataka" class="block-buttons__button">Посмотреть</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards__card">
+							<div class="cards__name">Лендинг | English gure</div>
+							<div class="cards__parent">
+								<div class="cards__box">
+									<div class="cards__picture">
+										<img loading="lazy" class="cards__image" src="img/cards_image_2.webp" alt="Image">
+										<div class="cards__fon"></div>
+										<div class="cards__body">
+											<div class="cards__text">Лендинг | English gure</div>
+											<div class="cards__block-buttons block-buttons">
+												<a target="_blank" href="https://aleksandrfrs.ru/english-gure" class="block-buttons__button">Посмотреть</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="cards__card">
+							<div class="cards__name">Лендинг | продвижений Topvtop</div>
+							<div class="cards__parent">
+								<div class="cards__box">
+									<div class="cards__picture">
+										<img loading="lazy" class="cards__image" src="img/cards_image_3.webp" alt="Image">
+										<div class="cards__fon"></div>
+										<div class="cards__body">
+											<div class="cards__text">Лендинг | продвижений Topvtop</div>
+											<div class="cards__block-buttons block-buttons">
+												<a target="_blank" href="https://aleksandrfrs.ru/topvtop" class="block-buttons__button">Посмотреть</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="portfolio__block-buttons block-buttons">
+						<a href="portfolio.html" class="block-buttons__button">Открыть портфолио</a>
+					</div>
+				</div>
+			</section>
+			<section id="about-us" data-watch class="page__about-us about-us">
+				<div class="round round_position-1"></div>
+				<div class="round round_position-2"></div>
+				<div class="round round_position-3"></div>
+				<div class="about-us__container">
+					<div class="about-us__block-titles block-titles">
+						<h2 class="block-titles__title">
+							<div class="block-titles__gradient"></div>
+							<span>О нас</span>
+						</h2>
+					</div>
+					<div data-tabs class="tabs">
+						<nav data-tabs-titles class="tabs__navigation">
+							<button type="button" class="tabs__title _tab-active">
+								<span>Верстка</span>
+								<span class="decor-arrow">
+									<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow.svg" alt="Icon">
+									<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow.svg" alt="Icon">
+									<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow.svg" alt="Icon">
+								</span>
+							</button>
+							<button type="button" class="tabs__title">
+								<span>Веб-дизайн</span>
+								<span class="decor-arrow">
+									<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow_1.svg" alt="Icon">
+									<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow_1.svg" alt="Icon">
+									<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow_1.svg" alt="Icon">
+								</span>
+							</button>
+						</nav>
+						<div data-tabs-body class="tabs__content">
+							<div class="tabs__body">
+								<div class="tabs__box">
+									<div class="tabs__column">
+										<div class="tabs__description"><span>Я Frontend-разработчик</span> с&nbsp;4-хлетним опытом в&nbsp;создании адаптивных и&nbsp;кроссбраузерных веб-сайтов. Мой основной фокус — это качество кодирования и&nbsp;внимание к&nbsp;деталям. Я&nbsp;владею HTML, CSS и&nbsp;JavaScript, а&nbsp;также знаком с&nbsp;такими инструментами, как Sass и Tailwind. Мой опыт позволяет мне эффективно работать с&nbsp;макетами, обеспечивая точное отображение дизайна в&nbsp;браузере.</div>
+										<div class="tabs__row">
+											<div class="tabs__block-buttons-2 block-buttons-2">
+												<a target="_blank" href="https://t.me/Aleksandr_freelancer" class="button">
+													Обсудить проект в <span>tg</span>
+													<div class="decor-arrow">
+														<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow.svg" alt="Icon">
+														<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow.svg" alt="Icon">
+														<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow.svg" alt="Icon">
+													</div>
+												</a>
+											</div>
+											<ul class="tabs__messengers messengers">
+												<li class="messengers__item"><a target="_blank" href="https://t.me/Aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/telegram.svg" alt="Icon"></a></li>
+												<li class="messengers__item"><a target="_blank" href="mailto:aleksandr_freelancer@mail.ru" class="messengers__link"><img class="messengers__icon" src="img/email.svg" alt="Icon"></a></li>
+												<li class="messengers__item"><a target="_blank" href="https://kwork.ru/user/aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/kwork.svg" alt="Icon"></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="tabs__picture tabs__picture_decor-1">
+										<div class="tabs__label _green">
+											<div class="tabs__name">Александр</div>
+											<div class="tabs__item">Веб-разработчик</div>
+										</div>
+										<img class="tabs__image" loading="lazy" src="img/about-us_image_1.webp" alt="Image">
+									</div>
+								</div>
+							</div>
+							<div class="tabs__body">
+								<div class="tabs__box">
+									<div class="tabs__column">
+										<div class="tabs__description"><span>Я web-дизайнер</span> с коммерческим опытом работы 1,5 года. Я&nbsp;специализируюсь на создании уникальных и&nbsp;интуитивно понятных пользовательских интерфейсов, которые не только привлекают внимание, но&nbsp;и эффективно решают задачи бизнеса. В&nbsp;последние полгода активно изучаю принципы UX/UI, чтобы лучше понимать потребности пользователей.</div>
+										<div class="tabs__row">
+											<div class="tabs__block-buttons-2 block-buttons-2">
+												<a target="_blank" href="https://t.me/alerisha99" class="button">
+													Обсудить проект в <span>tg</span>
+													<div class="decor-arrow">
+														<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow.svg" alt="Icon">
+														<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow.svg" alt="Icon">
+														<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow.svg" alt="Icon">
+													</div>
+												</a>
+											</div>
+											<ul class="tabs__messengers messengers">
+												<li class="messengers__item"><a target="_blank" href="https://t.me/alerisha99" class="messengers__link"><img class="messengers__icon" src="img/telegram.svg" alt="Icon"></a></li>
+												<li class="messengers__item"><a target="_blank" href="https://www.behance.net/alerisha99" class="messengers__link"><img class="messengers__icon" src="img/bexance.svg" alt="Icon"></a></li>
+											</ul>
+										</div>
+									</div>
+									<div class="tabs__picture tabs__picture_decor-2">
+										<div class="tabs__label _violet">
+											<div class="tabs__name">Алена</div>
+											<div class="tabs__item">Веб-дизайнер</div>
+										</div>
+										<img class="tabs__image" loading="lazy" src="img/about-us_image_2.webp" alt="Image">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div data-watch class="page__ticker ticker">
+				<div class="ticker__wrapper">
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Технологии <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+				</div>
+			</div>
+			<section id="technologies" class="page__technologies technologies">
+				<div class="technologies__container">
+					<div class="technologies__block-titles block-titles">
+						<h2 class="block-titles__title">
+							<div class="block-titles__gradient"></div>
+							<span>Технологии</span>
+						</h2>
+					</div>
+					<div class="technologies__columns">
+						<div class="technologies__column">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_1.svg" alt="Icon">
+								<div class="technologies__name">Html</div>
+							</div>
+							<div class="technologies__description">Это язык разметки, который позволяет создавать структуру веб-страниц, используя теги и элементы</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:100%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">100%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _blue">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_2.svg" alt="Icon">
+								<div class="technologies__name">Css</div>
+							</div>
+							<div class="technologies__description">Это язык стилей, который задаёт визуальное оформление веб-страниц, определяя цвет, шрифты и расположение элементов</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:100%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">100%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _yellow">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_3.svg" alt="Icon">
+								<div class="technologies__name">Js</div>
+							</div>
+							<div class="technologies__description">С его помощью можно создавать анимации, обрабатывать события и взаимодействовать с сервером</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:67%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">67%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _blue-lite">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_4.svg" alt="Icon">
+								<div class="technologies__name">Webpack</div>
+							</div>
+							<div class="technologies__description">Упрощает управление зависимостями и улучшает производительность, создавая единый файл для загрузки в браузере</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:80%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">80%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _violet">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_5.svg" alt="Icon">
+								<div class="technologies__name">Sass</div>
+							</div>
+							<div class="technologies__description">Препроцессор CSS, добавляет функции, такие как переменные, вложенные селекторы и миксины, для упрощения написания стилей</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:100%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">100%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _red">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_6.svg" alt="Icon">
+								<div class="technologies__name">Gulp</div>
+							</div>
+							<div class="technologies__description">Упрощает процессы сборки проекта, такие как минификация файлов, компиляция Sass и оптимизация изображений</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:90%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">90%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _blue-2">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_7.svg" alt="Icon">
+								<div class="technologies__name">Vs-code</div>
+							</div>
+							<div class="technologies__description">Мощный редактор кода с поддержкой множества языков программирования и расширений.</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:100%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">100%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _green">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_8.svg" alt="Icon">
+								<div class="technologies__name">Figma</div>
+							</div>
+							<div class="technologies__description">Инструмент для дизайна интерфейсов, который позволяет командам совместно работать в реальном времени</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:90%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">90%</div>
+								</div>
+							</div>
+						</div>
+						<div class="technologies__column _blue-3">
+							<div class="technologies__box">
+								<img class="technologies__icon" loading="lazy" src="img/technologies_icon_9.svg" alt="Icon">
+								<div class="technologies__name">Tailwind</div>
+							</div>
+							<div class="technologies__description">Позволяет быстро создавать адаптивные и красивые интерфейсы, используя готовые классы</div>
+							<div class="technologies__row">
+								<div class="technologies__item">skill</div>
+								<div class="technologies__progress">
+									<div class="technologies__line">
+										<div style="width:100%;" class="technologies__bg-line"></div>
+									</div>
+									<div class="technologies__percent">100%</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section data-watch class="page__questions questions">
+				<div class="questions__container">
+					<div class="questions__block-titles block-titles">
+						<h2 class="block-titles__title">
+							<div class="block-titles__gradient"></div>
+							<span>Вопрос-ответ</span>
+						</h2>
+					</div>
+					<div class="questions__parent">
+						<div class="questions__bg"></div>
+						<div data-spollers data-one-spoller class="spollers">
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Стоимость разработки сайта ? </summary>
+								<div class="spollers__body">
+									<div class="spollers__text">
+										Цена разработки сайта может варьироваться в&nbsp;зависимости от&nbsp;множества факторов, таких как сложность проекта, используемые технологии и&nbsp;технического задания
+									</div>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Как будет выглядеть процесс разработки сайта?</summary>
+								<div class="spollers__body">
+									<div class="spollers__text">
+										Мы начнем с&nbsp;обсуждения ваших требований, затем перейдем к&nbsp;дизайну, разработке и&nbsp;тестированию, прежде чем&nbsp;запустить ваш&nbsp;сайт
+									</div>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Как долго происходит разработка сайта?</summary>
+								<div class="spollers__body">
+									<div class="spollers__text">
+										Длительность процесса разработки сайта зависит от&nbsp;его сложности, и&nbsp;требований клиента, и&nbsp;может варьироваться от&nbsp;нескольких дней до&nbsp;месяца. В&nbsp;среднем простые проекты занимают 1-2 недели, а&nbsp;более сложные — 2-4 недели
+									</div>
+								</div>
+							</details>
+							<details class="spollers__item">
+								<summary data-spoller-close class="spollers__title">Что делать, если я нашел(а) ошибку после завершения проекта?</summary>
+								<div class="spollers__body">
+									<div class="spollers__text">
+										Вы можете связаться со&nbsp;мной в&nbsp;любое время, я&nbsp;оперативно исправлю все ошибки в&nbsp;проекте! Ошибки — это часть процесса, и&nbsp;важно помнить, что главное — это быстрое и&nbsp;качественное их&nbsp;исправление.
+									</div>
+								</div>
+							</details>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div data-watch class="page__ticker ticker">
+				<div class="ticker__wrapper">
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+					<div class="ticker__item">
+						<div class="ticker__name">Заказать сайт <img class="ticker__icon" loading="lazy" src="img/arrow_3.svg" alt="Icon"></div>
+						<div class="ticker__picture"><img class="ticker__arrow" loading="lazy" src="img/arrow_4.webp" alt="Icon"></div>
+					</div>
+				</div>
+			</div>
+			<section data-watch id="request" class="page__request request">
+				<div class="round-animation"></div>
+				<div class="request__container">
+					<div class="request__block-titles block-titles">
+						<h2 class="block-titles__title">
+							<div class="block-titles__gradient"></div>
+							<span>Заказать сайт</span>
+						</h2>
+					</div>
+					<div class="request__parent">
+						<div class="request__module">
+							<form data-ajax data-popup-message="#form-message" action="files/sendmessage.php" method="POST" class="form">
+								<div class="form__bg form__bg_radius">
+									<h2 class="form__title">Заполните форму и&nbsp;я&nbsp;свяжусь с&nbsp;вами</h2>
+									<div class="form__box">
+										<div class="form__lines">
+											<div class="form__line">
+												<label for="text_2" class="form__label">Имя <span>*</span></label>
+												<input data-required id="text_2" autocomplete="off" type="text" name="Имя:" data-error="Введите имя" placeholder="Александр" class="input">
+											</div>
+											<div class="form__line">
+												<label for="email_2" class="form__label">Электронная почта<span>*</span></label>
+												<input data-validate data-required="email" id="email_2" autocomplete="off" type="email" name="Почта:" data-error="Введите электронную почту" placeholder="Website@mail.ru" class="input">
+											</div>
+											<div class="form__line">
+												<label for="budget" class="form__label">Бюджет <span>*</span></label>
+												<input id="budget" data-budget data-required autocomplete="off" type="tel" name="Бюджет:" placeholder="50 000" class="input">
+											</div>
+											<div class="form__line form__line_none">
+												<div class="form__label">Тип сайта<span>*</span></div>
+												<select name="Тип сайта:" data-error="Выберите услугу" data-required data-class-modif="select">
+													<option value="" selected>Выберите</option>
+													<option value="Лендинг">Лендинг</option>
+													<option value="Корпоративный сайт">Корпоративный сайт</option>
+													<option value="Интернет магазин">Интернет магазин</option>
+													<option value="Сайт-каталог">Сайт-каталог</option>
+													<option value="Сайт-визитка">Сайт-визитка</option>
+													<option value="Индивидуальный проект">Индивидуальный проект</option>
+													<option value="Другое(указать в описание)">Другое(указать в описание)</option>
+												</select>
+											</div>
+										</div>
+										<div class="form__block-module">
+											<div class="form__options options">
+												<div class="options__title">Срок на разработку</div>
+												<div class="options__items">
+													<div class="options__item">
+														<input hidden id="o_5" class="options__input" checked type="radio" value="Нужно срочно" name="Срок на разработку:">
+														<label for="o_5" class="options__label"><span class="options__text">Нужно срочно</span></label>
+													</div>
+													<div class="options__item">
+														<input hidden id="o_6" class="options__input" type="radio" value="Не тороплюсь" name="Срок на разработку:">
+														<label for="o_6" class="options__label"><span class="options__text">Не тороплюсь</span></label>
+													</div>
+												</div>
+											</div>
+											<div class="form__options options">
+												<div class="options__title">Есть ли у вас техническое задание</div>
+												<div class="options__items">
+													<div class="options__item">
+														<input hidden id="o_7" class="options__input" checked type="radio" value="Да" name="Техническое задание:">
+														<label for="o_7" class="options__label"><span class="options__text">Да</span></label>
+													</div>
+													<div class="options__item">
+														<input hidden id="o_8" class="options__input" type="radio" value="Нет" name="Техническое задание:">
+														<label for="o_8" class="options__label"><span class="options__text">Нет</span></label>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="form__line">
+											<label for="textarea_2" class="form__label">Описание проекта, требования, особые пожелания</label>
+											<textarea name="Комментарий" placeholder="Укажите данные для проекта как можно подробнее" id="textarea_2" class="input"></textarea>
+										</div>
+									</div>
+									<div class="loader">
+										<div class="loader__item"><span></span></div>
+										<div class="loader__item"><span></span></div>
+										<div class="loader__item"><i></i></div>
+										<div class="loader__item"><i></i></div>
+									</div>
+									<div class="form__block-buttons block-buttons">
+										<button type="submit" class="block-buttons__button">Отправить</button>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="request__contacts">
+							<div class="request__box">
+								<h3 class="request__sub-title"><span>Свяжитесь со&nbsp;мной</span> для&nbsp;обсуждения проекта, удобным для&nbsp;вас способом!</h3>
+								<ul class="request__messengers messengers">
+									<li class="messengers__item"><a target="_blank" href="https://t.me/Aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/telegram.svg" alt="Icon"></a></li>
+									<li class="messengers__item"><a target="_blank" href="mailto:aleksandr_freelancer@mail.ru" class="messengers__link"><img class="messengers__icon" src="img/email.svg" alt="Icon"></a></li>
+									<li class="messengers__item"><a target="_blank" href="https://www.behance.net/alerisha99" class="messengers__link"><img class="messengers__icon" src="img/bexance.svg" alt="Icon"></a></li>
+									<li class="messengers__item"><a target="_blank" href="https://kwork.ru/user/aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/kwork.svg" alt="Icon"></a></li>
+								</ul>
+							</div>
+							<div class="request__block-buttons-2 block-buttons-2">
+								<a target="_blank" href="https://t.me/Aleksandr_freelancer" class="button">
+									Обсудить проект в <span>tg</span>
+									<div class="decor-arrow">
+										<img class="decor-arrow__icon decor-arrow__icon_option-1" src="img/arrow.svg" alt="Icon">
+										<img class="decor-arrow__icon decor-arrow__icon_option-2" src="img/arrow.svg" alt="Icon">
+										<img class="decor-arrow__icon decor-arrow__icon_option-3" src="img/arrow.svg" alt="Icon">
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer data-watch class="footer">
+			<div class="footer__container">
+				<div class="footer__row">
+					<a href="https://aleksandrfrs.ru" class="footer__logo logo">
+						<div class="logo__animate">
+							<img class="logo__image" src="img/logo.svg" alt="Логотип">
+							<img class="logo__image logo__image_bg" src="img/logo_2.svg" alt="Логотип">
+						</div>
+					</a>
+					<div class="footer__menu menu-footer">
+						<nav class="menu-footer__body">
+							<ul class="menu-footer__list">
+								<li class="menu-footer__item"><a href="portfolio.html" class="menu-footer__link">Портфолио</a></li>
+								<li class="menu-footer__item"><button type="button" data-goto-header data-goto="#about-us" class="menu-footer__link">О нас</button></li>
+								<li class="menu-footer__item"><button type="button" data-goto-header data-goto="#technologies" class="menu-footer__link">Технологии</button></li>
+								<li class="menu-footer__item"><button type="button" data-goto-header data-goto="#request" class="menu-footer__link">Контакты</button></li>
+							</ul>
+						</nav>
+					</div>
+					<ul class="footer__messengers messengers">
+						<li class="messengers__item"><a target="_blank" href="https://t.me/Aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/telegram.svg" alt="Icon"></a></li>
+						<li class="messengers__item"><a target="_blank" href="mailto:aleksandr_freelancer@mail.ru" class="messengers__link"><img class="messengers__icon" src="img/email.svg" alt="Icon"></a></li>
+						<li class="messengers__item"><a target="_blank" href="https://kwork.ru/user/aleksandr_freelancer" class="messengers__link"><img class="messengers__icon" src="img/kwork.svg" alt="Icon"></a></li>
+					</ul>
+				</div>
+				<div class="footer__bottom">
+					<div data-prlx-mouse data-prlx-cx="2" class="footer__flash"></div>
+					<div class="footer__copywriting">Copyright © <span id="year"></span> Aleksandr_freelancer Все&nbsp;права&nbsp;защищены.</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<div id="popup" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__home">
+					<form data-ajax data-popup-message="#form-message" action="files/sendmessage.php" method="POST" class="form">
+						<div class="form__bg">
+							<h2 class="form__title">Заполните форму и&nbsp;я&nbsp;свяжусь с&nbsp;вами</h2>
+							<div class="form__box">
+								<div class="form__lines">
+									<div class="form__line">
+										<label for="text" class="form__label">Имя <span>*</span></label>
+										<input data-required id="text" autocomplete="off" type="text" name="Имя:" data-error="Введите имя" placeholder="Александр" class="input">
+									</div>
+									<div class="form__line">
+										<label for="email" class="form__label">Электронная почта<span>*</span></label>
+										<input data-validate data-required="email" id="email" autocomplete="off" type="email" name="Почта:" data-error="Введите электронную почту" placeholder="Website@mail.ru" class="input">
+									</div>
+									<div class="form__line">
+										<label for="budget" class="form__label">Бюджет <span>*</span></label>
+										<input id="budget" data-budget data-required autocomplete="off" type="tel" name="Бюджет:" placeholder="50 000" class="input">
+									</div>
+									<div class="form__line form__line_none">
+										<div class="form__label">Тип сайта<span>*</span></div>
+										<select name="Тип сайта:" data-error="Выберите услугу" data-required data-scroll="200" data-class-modif="select">
+											<option value="" selected>Выберите</option>
+											<option value="Лендинг">Лендинг</option>
+											<option value="Корпоративный сайт">Корпоративный сайт</option>
+											<option value="Интернет магазин">Интернет магазин</option>
+											<option value="Сайт-каталог">Сайт-каталог</option>
+											<option value="Сайт-визитка">Сайт-визитка</option>
+											<option value="Индивидуальный проект">Индивидуальный проект</option>
+											<option value="Другое(указать в описание)">Другое(указать в описание)</option>
+										</select>
+									</div>
+								</div>
+								<div class="form__block-module">
+									<div class="form__options options">
+										<div class="options__title">Срок на разработку</div>
+										<div class="options__items">
+											<div class="options__item">
+												<input hidden id="o_1" class="options__input" checked type="radio" value="Нужно срочно" name="Срок на разработку:">
+												<label for="o_1" class="options__label"><span class="options__text">Нужно срочно</span></label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_2" class="options__input" type="radio" value="Не тороплюсь" name="Срок на разработку:">
+												<label for="o_2" class="options__label"><span class="options__text">Не тороплюсь</span></label>
+											</div>
+										</div>
+									</div>
+									<div class="form__options options">
+										<div class="options__title">Есть ли у вас техническое задание</div>
+										<div class="options__items">
+											<div class="options__item">
+												<input hidden id="o_3" class="options__input" checked type="radio" value="Да" name="Техническое задание:">
+												<label for="o_3" class="options__label"><span class="options__text">Да</span></label>
+											</div>
+											<div class="options__item">
+												<input hidden id="o_4" class="options__input" type="radio" value="Нет" name="Техническое задание:">
+												<label for="o_4" class="options__label"><span class="options__text">Нет</span></label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="form__line">
+									<label for="textarea" class="form__label">Описание проекта, требования, особые пожелания</label>
+									<textarea name="Комментарий" placeholder="Укажите данные для проекта как можно подробнее" id="textarea" class="input"></textarea>
+								</div>
+							</div>
+							<div class="loader">
+								<div class="loader__item"><span></span></div>
+								<div class="loader__item"><span></span></div>
+								<div class="loader__item"><i></i></div>
+								<div class="loader__item"><i></i></div>
+							</div>
+							<div class="form__block-buttons block-buttons">
+								<button type="submit" class="block-buttons__button">Отправить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="form-message" aria-hidden="true" class="popup">
+		<div class="popup__wrapper">
+			<div class="popup__content popup__content_option">
+				<button data-close type="button" class="popup__close"></button>
+				<div class="popup__home">
+					<div class="popup__block">
+						<h2 class="popup__title">Успешная отправка</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="preloader">
+		<script>
+			(function preloader() {
+				const preloaderImages = document.querySelectorAll('img');
+				const preloaderContainer = document.querySelector('#preloader');
+				const settings = {
+					delayRemovePreloader: 500,
+					counter: true,
+					line: false,
+					custom: {
+						init: true,
+						body: `
+						<span class="preloader__item preloader__item_one"></span>
+						<span class="preloader__item preloader__item_two"></span>
+						<span class="preloader__item preloader__item_three"></span>
+						<span class="preloader__item"></span>
+						<span class="preloader__shadow"></span>
+						<span class="preloader__shadow-2"></span>
+				`
+					},
+				};
+				if (preloaderImages.length) {
+					const preloaderTemplate = `
+					<div class="preloader">
+						<div class="preloader__body">
+							${settings.custom.init ? settings.custom.body : ''}
+							${settings.counter ? '<div class="preloader__counter">0%</div>' : ''}
+							${settings.line ? '<div class="preloader__line"><span></span></div>' : ''}
+						</div>
+					</div>`;
+					document.documentElement.insertAdjacentHTML("beforeend", preloaderTemplate);
+					const
+						preloader = document.querySelector('.preloader'),
+						showPecentLoad = document.querySelector('.preloader__counter'),
+						showLineLoad = document.querySelector('.preloader__line span'),
+						htmlDocument = document.documentElement;
+					let imagesLoadedCount = counter = progress = 0;
+					htmlDocument.classList.add('loading');
+					htmlDocument.classList.add('lock');
+					window.addEventListener("load", () => htmlDocument.classList.add('download-done'));
+					preloaderImages.forEach(preloaderImage => {
+						const imgClone = document.createElement('img');
+						if (imgClone) {
+							imgClone.onload = imageLoaded;
+							imgClone.onerror = imageLoaded;
+							preloaderImage.dataset.src ? imgClone.src = preloaderImage.dataset.src : imgClone.src = preloaderImage.src;
+						}
+					});
+
+					function setValueProgress(progress) {
+						showPecentLoad ? showPecentLoad.innerText = `${progress}%` : null;
+						showLineLoad ? showLineLoad.style.width = `${progress}%` : null;
+					}
+					showPecentLoad ? setValueProgress(progress) : null;
+
+					function imageLoaded() {
+						imagesLoadedCount++;
+						progress = Math.round((100 / preloaderImages.length) * imagesLoadedCount);
+						const intervalId = setInterval(() => {
+							counter >= progress ? clearInterval(intervalId) : setValueProgress(++counter);
+							counter >= 100 ? addLoadedClass() : null;
+						}, 40);
+					}
+
+					function addLoadedClass() {
+						if (this.isRun == true) return;
+						this.isRun = true;
+
+						let timer = setInterval(() => {
+							if (htmlDocument.closest('.download-done')) {
+								htmlDocument.classList.remove('lock');
+								htmlDocument.classList.remove('loading');
+								setTimeout(() => {
+									htmlDocument.classList.remove('download-done');
+									htmlDocument.classList.add('loaded');
+								}, settings.delayRemovePreloader >= 500 ? settings.delayRemovePreloader - 500 : 0);
+								const intervalRemovePreloader = setInterval(() => {
+									preloader.remove();
+									clearInterval(intervalRemovePreloader);
+									clearInterval(timer);
+									preloaderContainer.remove();
+								}, settings.delayRemovePreloader);
+							} else {
+								return
+							}
+						}, 300);
+					}
+				} else {
+					preloaderContainer.remove();
+				}
+			})();
+		</script>
+	</div>
+	<script data-main-script src="js/app.min.js?_v=20250115191120"></script>
+</body>
+
+</html>
